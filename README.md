@@ -1,8 +1,8 @@
 # Este é um modelo de como pode ser informada a contribuição de cada membro do grupo no checkpoint 2 da disciplina de Front end 2.
 
 ## Autores (Contribuições)
-## Dia 1
 ## Pagina de Login:
+# branch-longin_normalization
 - Ambos os campos devem ser normalizados (ex: retirar espaços desnecessários);
 - Nenhum dos campos pode ser vazio/nulo;
 - O email deve ser de um tipo válido (ex: aplicar expressões regulares);
@@ -11,6 +11,7 @@
 ---
 
 ## Página de Registro:
+Branch - feat_signup_validation
 - Ambos os campos devem ser normalizados (ex: retirar espaços desnecessários);
 - Nenhum dos campos pode ser vazio/nulo;
 - O email deve ser de um tipo válido (ex: aplicar expressões regulares);
@@ -20,15 +21,15 @@
 
 - [Bruno Chaves](https://www.linkedin.com/in/bchavs12/)
     - Principais atividades realizadas:
-        - 
-        - 
+        - Gerenciamento do repositorio(Branchs,pullRequest)
+        - Validação do formulario de registro
         - 
         - 
         
 - [Igor Cruz](https://github.com/IgorFreitasCruz)
     - Principais atividades realizadas:
-        - 
-        - 
+        - Validação do Login
+        - registro de enpoints(api)
         - 
 
 - [Matheus Quirino](https://github.com/mthflashice)
@@ -45,6 +46,6 @@
 
 - [Carlos roberto landerdahl](https://github.com/Carlos-Landerdahl)
     - Principais atividades realizadas:
-        - 
-        - 
+        -  Validação do Login
+        -  registro de enpoints(api)
         - 

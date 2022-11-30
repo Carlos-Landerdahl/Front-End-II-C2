@@ -1,0 +1,23 @@
+{
+  "name": "todo_app_ctd",
+  "version": "1.0.0",
+  "description": "ProjetoCTD",
+  "main": "index.js",
+  "scripts": {
+    "test": "start",
+    "commit": "cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bchavs12/To-Do-App_CTD.git"
+  },
+  "author": "Bruno Chaves",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bchavs12/To-Do-App_CTD/issues"
+  },
+  "homepage": "https://github.com/bchavs12/To-Do-App_CTD/index.html",
+  "devDependencies": {
+    "commitizen": "^4.2.5"
+  }
+}
