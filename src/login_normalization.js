@@ -1,5 +1,5 @@
-const email = document.getElementById("inputEmail").value
-const password = document.getElementById("inputPassword").value
+const email = document.getElementById("inputEmail")
+const password = document.getElementById("inputPassword")
 const button = document.getElementById("btnLogin")
 
 
@@ -18,7 +18,6 @@ function validaLogin() {
         return false;
     }
 }
-
 
 function baseUrl() {
     return "https://ctd-fe2-todo-v2.herokuapp.com/v1"
@@ -60,11 +59,9 @@ button.addEventListener('click', function (e) {
 
     if (validaLogin()) {
 
-        evento.preventDefault();
-
         /* Normalizando os inputs da tela de login */
-        emailLogin = normalizaStringUsandoTrim(emailLogin.value);
-        passwordLogin = normalizaStringUsandoTrim(passwordLogin.value);
+        emailLogin = normalizaStringUsandoTrim(email.value);
+        passwordLogin = normalizaStringUsandoTrim(password.value);
 
         console.log(`E-mail: ${emailLogin}`);
         console.log(`Senha: ${passwordLogin}`);
