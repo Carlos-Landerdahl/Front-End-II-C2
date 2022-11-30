@@ -2,11 +2,53 @@ const email = document.getElementById("inputEmail").value
 const password = document.getElementById("inputPassword").value
 const button = document.getElementById("btnLogin")
 
-button.disabled = false;
 
-function emailNomalization(email) {
-    return String(email)
-        .trim();
+function validaLogin() {
+    if (email && password) {
+        /* Ativa o botão de acesso novamente e retorna suas propriedades */
+        button.style.backgroundColor = "#7898FF"
+        button.innerText = "Acessar";
+        button.removeAttribute("disabled");
+        return true;
+    } else {
+        /* Desabilita o botão de acesso e troca suas caracteristicas*/
+        // button.style.backgroundColor = "#979292A1"
+        // button.innerText = "Bloqueado";
+        // button.setAttribute("disabled", true);
+        return false;
+    }
+}
+
+
+function baseUrl() {
+    return "https://ctd-fe2-todo-v2.herokuapp.com/v1"
+}
+
+function loginApi(loginJson) {
+    fetch(`${baseUrl()}/users/login`, {
+        method: "POST",
+        body: loginJson,
+        headers: {
+            "Content-Type": "application/json",
+        }
+    })
+        .then(
+            response => {
+                return response.json()
+            }
+        )
+        .then(
+            response => {
+                console.log(response)
+                sessionStorage.setItem('jwt', response.jwt)
+                window.location.href = 'tarefas.html'
+            }
+        )
+        .catch(
+            error => {
+                console.log(error)
+            }
+        )
 }
 
 button.addEventListener('click', function (e) {
@@ -45,33 +87,4 @@ button.addEventListener('click', function (e) {
         console.log("Login inválido");
     }
 
-    fetch("https://ctd-fe2-todo-v2.herokuapp.com/v1/users/login", {
-        method: "POST",
-        body: loginJs,
-        headers: {
-            "Content-Type": "application/json",
-        }
-    })
-        .then(
-            response => {
-                return response.json()
-            }
-        )
-        .then(
-            response => {
-                console.log(response)
-            }
-        )
-        .catch(
-            error => {
-                console.log(error)
-            }
-        )
 });
-
-
-
-
-
-
-
