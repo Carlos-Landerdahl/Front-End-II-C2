@@ -25,14 +25,16 @@
       <h1>Acessar</h1>
       <label>
         E-mail:
-        <input id="inputEmail" type="text">
+        <input id="inputEmail" type="text" required>
+        <small id="emailIsValid"></small>
       </label>
       <label>
         Senha:
-        <input id="inputPassword" type="password">
+        <input id="inputPassword" type="password" required>
+        <small id="passwordIsValid"></small>
       </label>
 
-      <button id="btnLogin" type="submit">Acessar</button>
+      <button id="btnLogin" type="submit" disabled>Acessar</button>
 
     </form>
     <div class="ingressar">
