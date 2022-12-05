@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -18,39 +18,39 @@
     <img src="./assets/pessoa-signup.png" alt="">
   </div>
   <div class="right">
-    <form>
+    <form id="form">
       <div class="form-header">
         <p>To-Do App</p>
       </div>
 
       <label>
-        Nome:
-        <input type="text">
-      </label>
-      <label>
-        Sobrenome:
-        <input type="text">
+        Nome Completo:
+        <input type="text" id="inputName" required>
       </label>
       <label>
         E-mail:
-        <input type="email">
+        <input type="email" id="inputEmail" required>
       </label>
       <label>
         Senha:
-        <input type="password">
+        <input type="password" id="inputPwd" required>
+        <small>Minimo de 6 caracteres</small>
       </label>
       <label>
         Repetir senha:
-        <input type="password">
+        <input type="password" id="inputPwd2" required>
+        <small>Minimo de 6 caracteres</small>
       </label>
 
-      <button>Criar Conta</button>
+      <button id="btnAcess" type="submit" >Criar Conta</button>
 
     </form>
     <div class="ingressar">
       <a href="index.html">Já possui conta? Acesse aqui</a>
     </div>
   </div>
+
+<script type="module" src="./src/registerValidation/registerValidation.js"></script>
 
 </body>
 

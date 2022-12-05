@@ -51,6 +51,7 @@ input {
 input:focus {
   outline: none;
   border: 1px solid lightgrey;
+  box-shadow: 0px 0px 2px  teal;
 }
 
 label {
@@ -58,7 +59,7 @@ label {
   font-weight: 300;
   margin-bottom: -.1em;
   margin-top: 1em;
-  font-size: .8em;
+  font-size: 1em;
 }
 
 button {
@@ -68,6 +69,16 @@ button {
   margin-top: 2em;
   font-weight: 400;
   font-size: 1em;
+  box-shadow: 0px 3px 5px  teal;
+}
+
+button:hover{
+  background-color: var(--hoverBtn);
+  box-shadow: 0px 3px 5px  teal;
+}
+
+button:disabled{
+  background-color: #ccc;
 }
 
 .form-header {
@@ -94,4 +105,8 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+a:hover{
+  color: var(--hoverBtn);
 }

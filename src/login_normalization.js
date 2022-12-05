@@ -35,7 +35,7 @@ button.addEventListener('click', function (e) {
 });
 
 function baseUrl() {
-    return "https://ctd-fe2-todo-v2.herokuapp.com/v1"
+    return "http://todo-api.ctd.academy:3000/v1"
 }
 
 function loginApi(loginJson) {
