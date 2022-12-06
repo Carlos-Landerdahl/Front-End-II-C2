@@ -1,15 +1,51 @@
 /* Captura de dados e normalização dos usuarios */
 
-let btnAcess = document.getElementById('btnAcess');
-btnAcess.addEventListener('click', function(event){
+import baseUrl from "./utils.js";
 
-    let inputName = document.getElementById('inputName');
-    let inputEmail = document.getElementById('inputEmail');
-    let inputPwd = document.getElementById('inputPwd');
-    let inputPwd2 = document.getElementById('inputPwd2');
+let btnCreateAccount = document.getElementById('btnCreateAccount');
+btnCreateAccount.addEventListener('click', function (event) {
+    event.preventDefault()
 
-    if(inputName.value){
-        console.log(event.preventDefault());
-        console.log("clicou no botão");
+    const inputName = document.getElementById('inputName');
+    const inputSurname = document.getElementById('inputSurname');
+    const inputEmail = document.getElementById('inputEmail');
+    const inputPwd = document.getElementById('inputPwd');
+    const inputPwd2 = document.getElementById('inputPwd2');
+
+    const userInput = JSON.stringify({
+        "firstName": inputName.value,
+        "lastName": inputSurname.value,
+        "email": inputEmail.value,
+        "password": inputPwd.value,
+    })
+
+    const requestConfig = {
+        method: "POST",
+        body: userInput,
+        headers: {
+            "Content-Type": "application/json"
+        }
     }
+
+    fetch(`${baseUrl()}/users`, requestConfig)
+        .then(
+            response => {
+                console.log(response)
+                return response
+            }
+        )
+        .then(
+            token => {
+                try {
+                    sessionStorage.setItem("jwt", token.jwt)
+                }
+                catch {
+                    throw new Error("O cadastro não deu certo.")
+                }
+            }
+        )
+        .catch(
+            error => console.log(error)
+        )
+
 });

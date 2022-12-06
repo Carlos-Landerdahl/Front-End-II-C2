@@ -6,14 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To-Do App</title>
-
   <!-- ---------------- estilos compartilhados entre login e signup ---------------- -->
   <link rel="stylesheet" href="styles/acesso.css">
-  
 </head>
 
 <body>
-
   <div class="left">
     <img src="./assets/pessoa-signup.png" alt="">
   </div>
@@ -24,8 +21,12 @@
       </div>
 
       <label>
-        Nome Completo:
+        Nome:
         <input type="text" id="inputName" required>
+      </label>
+      <label>
+        Sobrenome:
+        <input type="text" id="inputSurname" required>
       </label>
       <label>
         E-mail:
@@ -42,7 +43,7 @@
         <small>Minimo de 6 caracteres</small>
       </label>
 
-      <button id="btnAcess" type="submit" >Criar Conta</button>
+      <button id="btnCreateAccount" type="submit" >Criar Conta</button>
 
     </form>
     <div class="ingressar">
@@ -50,7 +51,8 @@
     </div>
   </div>
 
-<script type="module" src="./src/registerValidation/registerValidation.js"></script>
+<script type="module" src="./src/registerValidation.js"></script>
+<!-- <script type="module" src="./src/utils.js"></script> -->
 
 </body>
 

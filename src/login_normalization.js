@@ -1,3 +1,5 @@
+import { baseUrl } from "./utils"
+
 let email = document.getElementById("inputEmail")
 let password = document.getElementById("inputPassword")
 let button = document.getElementById("btnLogin")
@@ -33,10 +35,6 @@ button.addEventListener('click', function (e) {
     }
 
 });
-
-function baseUrl() {
-    return "http://todo-api.ctd.academy:3000/v1"
-}
 
 function loginApi(loginJson) {
     fetch(`${baseUrl()}/users/login`, {
