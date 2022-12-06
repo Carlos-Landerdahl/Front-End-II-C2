@@ -1,4 +1,4 @@
-import { baseURl } from './utils'
+import { baseURl } from '../validacoes/utils'
 
 let jwt;
 
@@ -40,5 +40,4 @@ onload = function () {
         let nomeUsuario = document.getElementById("nomeUsuarioHeader")
         nomeUsuario.innerText = dadosUsuario.firstName
     }
-
 }
