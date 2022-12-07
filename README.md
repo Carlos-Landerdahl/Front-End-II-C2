@@ -28,9 +28,10 @@ Branch - feat_signup_validation
         
 - [Igor Cruz](https://github.com/IgorFreitasCruz)
     - Principais atividades realizadas:
-        - Validação do Login
-        - registro de enpoints(api)
-        - 
+        - Página de tarefas (CRUD)
+        - Ação botão de finalizar app
+        - Animação de carregamento (Spinner)
+        - Refatoração do código
 
 - [Matheus Quirino](https://github.com/mthflashice)
     - Principais atividades realizadas:
