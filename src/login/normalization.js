@@ -1,4 +1,3 @@
-import { baseUrl } from "./utils"
 
 let email = document.getElementById("inputEmail")
 let password = document.getElementById("inputPassword")
@@ -12,6 +11,7 @@ button.addEventListener('click', function (e) {
     email = document.querySelector("#inputEmail");
     password = document.querySelector("#inputPassword");
 
+    mostrarSpinner();
 
     if (validLogin()) {
         e.preventDefault()
@@ -46,7 +46,6 @@ function loginApi(loginJson) {
     })
         .then(
             resultado => {
-
                 if (resultado.status == 201) {
                     return resultado.json()
                 } else {
@@ -92,7 +91,7 @@ async function loginAssincrono(loginJson) {
 function loginSuccess(response) {
     console.log(response.jwt);
     sessionStorage.setItem("jwt", response.jwt)
-    location.href = "tarefas.html";
+    location.href = "tasks.html";
 }
 
 function loginError(response) {
@@ -121,7 +120,7 @@ function validLogin() {
 
 let emailIsValid = false;
 let passwordIsValid = false;
-let passwordValidation = 4;
+let passwordValidation = 3;
 let emailValidation = 8;
 
 email.addEventListener("keyup", () => {

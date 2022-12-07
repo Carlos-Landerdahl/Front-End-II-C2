@@ -1,11 +1,10 @@
 /* Captura de dados e normalização dos usuarios */
 
-import baseUrl from "./utils.js";
-
 let btnCreateAccount = document.getElementById('btnCreateAccount');
 btnCreateAccount.addEventListener('click', function (event) {
     event.preventDefault()
-
+    mostrarSpinner()
+    
     const inputName = document.getElementById('inputName');
     const inputSurname = document.getElementById('inputSurname');
     const inputEmail = document.getElementById('inputEmail');

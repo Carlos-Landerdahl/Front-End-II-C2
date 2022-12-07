@@ -5,15 +5,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script type="module" src="./src/tasks/task.js" defer ></script>
   <!-- ----------------------------- estilos CSS ----------------------------- -->
   <link rel="stylesheet" href="./styles/tarefas.css">
-
+  <link rel="stylesheet" href="./styles/common.css">
   <!-- ------------------- Biblioteca de icones - Fontawesome -------------------- -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-
   <title>To-Do App</title>
 </head>
 
@@ -22,57 +20,33 @@
     <nav>
       <a href="#">Tarefas</a>
     </nav>
-
     <div class="user-info">
       <p id="nomeUsuarioHeader"></p>
       <div class="user-image"><img src="" alt=""></div>
-      <p id="closeApp">Finalizar sessão</i>
+      <p id="closeApp" onclick="closeApp()">Finalizar sessão</i>
       </p>
     </div>
   </header>
 
-
   <form class="nova-tarefa">
-    <div class="not-done "></div>
+    <div class="not-done"></div>
     <input id="novaTarefa" type="text" placeholder="Nova tarefa">
-    <button type="submit">
+    <button id="submitTask" type="submit">
       <img src="./assets/plus.png" alt="Adicionar uma nova tarefa">
     </button>
   </form>
 
-
-  <ul class="tarefas-pendentes">
-    <div>
-      <li class="tarefa">
-        <div class="not-done"></div>
-        <div class="descricao">
-          <p class="nome">Nova tarefa</p>
-          <p class="timestamp">Criada em: 15/07/21</p>
-        </div>
-      </li>
-
-      <li class="tarefa">
-        <div class="not-done"></div>
-        <div class="descricao">
-          <p class="nome">Nova tarefa</p>
-          <p class="timestamp">Criada em: 15/07/21</p>
-        </div>
-      </li>
-
-      <li class="tarefa">
-        <div class="not-done"></div>
-        <div class="descricao">
-          <p class="nome">Nova tarefa</p>
-          <p class="timestamp">Criada em: 15/07/21</p>
-        </div>
-      </li>
-
-    </div>
-  </ul>
+  <ul class="tarefas-pendentes"></ul>
 
   <h2 class="titulo-terminadas">Tarefas terminadas</h2>
-  <ul class="tarefas-terminadas">
 
-  </ul>
+  <ul class="tarefas-terminadas"></ul>
+
+  <script src="./src/utils.js"></script>
+  <script src="./src/tasks/tarefasPendentes.js"></script>
+  <script src="./src/tasks/tasksDone.js"></script>
+  <script src="./src/tasks/tasks.js"></script>
+  <script src="./src/loaders.js"></script>
 </body>
+
 </html>
