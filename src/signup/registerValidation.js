@@ -30,13 +30,14 @@ btnCreateAccount.addEventListener('click', function (event) {
         .then(
             response => {
                 console.log(response)
-                return response
+                return response.json()
             }
         )
         .then(
             token => {
                 try {
                     sessionStorage.setItem("jwt", token.jwt)
+                    location.href = './index.html'
                 }
                 catch {
                     throw new Error("O cadastro não deu certo.")
