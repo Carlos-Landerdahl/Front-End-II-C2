@@ -37,6 +37,7 @@ small {
   display: flex;
   font-size: 12px;
   font-weight: bold;
+  margin-top: 3px;
   color: #E9554EBB;
 }
 

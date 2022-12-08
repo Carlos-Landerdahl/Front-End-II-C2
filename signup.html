@@ -23,28 +23,31 @@
 
       <label>
         Nome:
-        <input type="text" id="inputName" required>
+        <input type="text" id="inputName">
+        <small id="nameIsValid"></small>
       </label>
       <label>
         Sobrenome:
         <input type="text" id="inputSurname" required>
+        <small id="smallSurname"></small>
       </label>
       <label>
         E-mail:
         <input type="email" id="inputEmail" required>
+        <small id="smallEmail"></small>
       </label>
       <label>
         Senha:
         <input type="password" id="inputPwd" required>
-        <small>Minimo de 6 caracteres</small>
+        <small id="smallPwd"></small>
       </label>
       <label>
         Repetir senha:
         <input type="password" id="inputPwd2" required>
-        <small>Minimo de 6 caracteres</small>
+        <small id="smallPwd2"></small>
       </label>
 
-      <button id="btnCreateAccount" type="submit" >Criar Conta</button>
+      <button id="btnCreateAccount" type="submit" disabled>Criar Conta</button>
 
     </form>
     <div class="ingressar">
@@ -52,7 +55,8 @@
     </div>
   </div>
 
-<script src="./src/signup/registerValidation.js"></script>
+  <script src="./src/signup/validation.js"></script>
+<script src="./src/signup/signup.js"></script>
 <script src="./src/utils.js"></script>
 <script src="./src/loaders.js"></script>
 
