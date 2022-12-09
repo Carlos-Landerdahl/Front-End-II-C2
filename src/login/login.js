@@ -89,5 +89,6 @@ function loginError(response) {
   console.log(response);
   if (response.status == 400 || response.status == 404) {
     alert("E-mail e/ou senha inválidos.")
+    location.reload()
   }
 }
