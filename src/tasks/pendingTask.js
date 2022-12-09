@@ -1,23 +1,23 @@
 
-function renderizaTarefaPendente(tarefa) {
+function renderPendingTask(task) {
 
-  let tarefasPendentesUL = document.querySelector(".tarefas-pendentes")
+  let pendingTasks = document.querySelector(".pendingTasks")
   let li = document.createElement("li");
-  li.classList.add("tarefa")
+  li.classList.add("task")
 
   li.innerHTML =
     `
-    <div class="not-done" onclick="manipulaTarefaPeloId(${tarefa.id})"></div>
-    <div class="descricao">
-      <p class="nome">${tarefa.description}</p>
-      <p class="timestamp">Criada em: ${tarefa.createdAt.substring(0, 10)}</p>
+    <div class="not-done" onclick="handleClickCreate(${task.id})"></div>
+    <div class="description">
+      <p class="nome">${task.description}</p>
+      <p class="timestamp">Criada em: ${task.createdAt.substring(0, 10)}</p>
     </div>
     `;
 
-  tarefasPendentesUL.appendChild(li);
+  pendingTasks.appendChild(li);
 }
 
-function manipulaTarefaPeloId(id) {
+function handleClickCreate(id) {
 
   payload = JSON.stringify({
     "completed": true

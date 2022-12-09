@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- ----------------------------- estilos CSS ----------------------------- -->
-  <link rel="stylesheet" href="./styles/tarefas.css">
+  <link rel="stylesheet" href="./styles/tasks.css">
   <link rel="stylesheet" href="./styles/common.css">
   <!-- ------------------- Biblioteca de icones - Fontawesome -------------------- -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -21,29 +21,29 @@
       <a href="#">Tarefas</a>
     </nav>
     <div class="user-info">
-      <p id="nomeUsuarioHeader"></p>
+      <p id="nameUserHeader"></p>
       <div class="user-image"><img src="" alt=""></div>
       <p id="closeApp" onclick="closeApp()">Finalizar sessão</i>
       </p>
     </div>
   </header>
 
-  <form class="nova-tarefa">
-    <input id="novaTarefa" type="text" placeholder="Nova tarefa">
+  <form class="newTask">
+    <input id="newTaskInput" type="text" placeholder="Nova tarefa">
     <button id="submitTask" type="submit" hidden>
       <img src="./assets/plus.png" alt="Adicionar uma nova tarefa">
     </button>
   </form>
-  <div class="titulo-terminadas">
+  <div class="titleFinished">
     <h2>Lista de tarefas</h2>
   </div>
-  <div class="container-task">
-    <ul class="tarefas-pendentes"></ul>
-    <ul class="tarefas-terminadas"></ul>
+  <div class="containerTask">
+    <ul class="pendingTasks"></ul>
+    <ul class="finishedTask"></ul>
   </div>
 
   <script src="./src/utils.js"></script>
-  <script src="./src/tasks/tarefasPendentes.js"></script>
+  <script src="./src/tasks/pendingTask.js"></script>
   <script src="./src/tasks/tasksDone.js"></script>
   <script src="./src/tasks/tasks.js"></script>
   <script src="./src/tasks/validation.js"></script>

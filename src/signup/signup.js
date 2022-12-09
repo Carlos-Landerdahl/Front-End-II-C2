@@ -1,6 +1,6 @@
 btnCreateAccount.addEventListener('click', function (event) {
   event.preventDefault()
-  mostrarSpinner()
+  RenderSpinner()
   validRegister()
   RegisterAccount()
   

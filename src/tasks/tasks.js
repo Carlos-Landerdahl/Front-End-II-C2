@@ -1,18 +1,18 @@
 
 let jwt;
 
-// CARREGANDO DADOS PERFIL USUARIO E TAREFAS
+// CARREGANDO DADOS PERFIL USUARIO E tasks
 onload = function () {
     jwt = sessionStorage.getItem('jwt');
 
     if (!jwt) {
         location.href = "index.html";
     } else {
-        buscarDadosUsuarioApi();
-        buscaTarefas();
+        getDataUserApi();
+        getTasks();
     }
 
-    function buscarDadosUsuarioApi() {
+    function getDataUserApi() {
         fetch(`${baseUrl()}/users/getMe`, {
             method: "GET",
             headers: {
@@ -26,7 +26,7 @@ onload = function () {
             )
             .then(
                 response => {
-                    renderizaDadosUsuario(response)
+                    renderDataUser(response)
                 }
             )
             .catch(
@@ -36,12 +36,12 @@ onload = function () {
             )
     }
 
-    function renderizaDadosUsuario(dadosUsuario) {
-        let nomeUsuario = document.getElementById("nomeUsuarioHeader")
+    function renderDataUser(dadosUsuario) {
+        let nomeUsuario = document.getElementById("nameUserHeader")
         nomeUsuario.innerText = dadosUsuario.firstName
     }
 
-    function buscaTarefas() {
+    function getTasks() {
         fetch(`${baseUrl()}/tasks`, {
             method: "GET",
             headers: {
@@ -55,7 +55,7 @@ onload = function () {
             )
             .then(
                 response => {
-                    manipulaListaTarefas(response)
+                    createTask(response)
                 }
             )
             .catch(
@@ -63,25 +63,25 @@ onload = function () {
             )
     }
 
-    function manipulaListaTarefas(tarefas) {
-        tarefas.forEach(tarefa => {
-            if (tarefa.completed) {
-                renderizaTarefaRealizada(tarefa)
+    function createTask(tasks) {
+        tasks.forEach(task => {
+            if (task.completed) {
+                renderingTaskComplete(task)
             } else {
-                renderizaTarefaPendente(tarefa);
+                renderPendingTask(task);
             }
         })
     }
 }
 
-// CRIANDO UMA NOVA TAREFA
-let novaTarefa = document.querySelector(".nova-tarefa")
-novaTarefa.addEventListener('submit', function (event) {
+// CRIANDO UMA NOVA task
+let newTaskInput = document.querySelector(".newTask")
+newTaskInput.addEventListener('submit', function (event) {
     event.preventDefault()
-    const novaTarefaUsuario = document.getElementById("novaTarefa")
+    const newTaskInput = document.getElementById("newTaskInput")
 
     payload = JSON.stringify({
-        "description": novaTarefaUsuario.value,
+        "description": newTaskInput.value,
         "completed": false
     })
 

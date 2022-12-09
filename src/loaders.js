@@ -1,6 +1,6 @@
 // Funções de animação para o usuário durante o carregamento da tela
 
-function mostrarSpinner() {
+function RenderSpinner() {
     // Selecionamos o corpo. Isso nos ajudará a incorporar nosso spinner
     // dentro de nosso HTML.
     const body = document.querySelector("body");

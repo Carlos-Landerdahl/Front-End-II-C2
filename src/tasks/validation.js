@@ -1,4 +1,4 @@
-let inputNewTask = document.getElementById('novaTarefa');
+let inputNewTask = document.getElementById('newTaskInput');
 
 
 inputNewTask.addEventListener("keyup", () => {

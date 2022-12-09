@@ -1,26 +1,26 @@
 
-function renderizaTarefaRealizada(tarefa) {
+function renderingTaskComplete(task) {
 
-    let tarefasTerminadasUL = document.querySelector(".tarefas-terminadas")
+    let taskFinishedUl = document.querySelector(".finishedTask")
     let li = document.createElement("li");
-    li.classList.add("tarefa")
+    li.classList.add("task")
 
     li.innerHTML = `
         <div class="done"></div>
-        <div class="descricao-task">
-            <p class="nome">${tarefa.description}</p>
+        <div class="taskDescription">
+            <p class="nome">${task.description}</p>
             <div>
-                <button onclick="editaTarefaPeloId(${tarefa.id})"><i id="${tarefa.createdAt}" class="fas fa-undo-alt change"></i></button>
-                <button onclick="deletaTarefaPeloId(${tarefa.id})">
-                    <i id="${tarefa.createdAt}" class="far fa-trash-alt"></i>
+                <button onclick="editTaskById(${task.id})"><i id="${task.createdAt}" class="fas fa-undo-alt change"></i></button>
+                <button onclick="deleteTaskById(${task.id})">
+                    <i id="${task.createdAt}" class="far fa-trash-alt"></i>
                 </button>
             </div>
         </div>
       `
-    tarefasTerminadasUL.appendChild(li);
+    taskFinishedUl.appendChild(li);
 }
 
-function deletaTarefaPeloId(id) {
+function deleteTaskById(id) {
     fetch(`${baseUrl()}/tasks/${id}`, {
         method: "DELETE",
         headers: {
@@ -35,7 +35,7 @@ function deletaTarefaPeloId(id) {
     )
 }
 
-function editaTarefaPeloId(id) {
+function editTaskById(id) {
 
     payload = JSON.stringify({
         "completed": false

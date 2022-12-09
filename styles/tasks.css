@@ -37,9 +37,9 @@ a {
   cursor: pointer;
 }
 
-/* Nova tarefa ----------------------------------------------------------- */
+/* Nova task ----------------------------------------------------------- */
 
-.nova-tarefa {
+.newTask {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,7 +51,7 @@ a {
   border-radius: .2em;
 }
 
-.nova-tarefa input[type=text] {
+.newTask input[type=text] {
   border: none;
   flex: 1;
   border-bottom: 1px solid lightgrey;
@@ -60,17 +60,17 @@ a {
   font-size: 1.1em;
 }
 
-.nova-tarefa input:focus {
+.newTask input:focus {
   outline: none;
   border-bottom: 1px solid grey;
 }
 
-.nova-tarefa input::placeholder {
+.newTask input::placeholder {
   color: rgb(197, 197, 197);
   text-indent: .2em;
 }
 
-.nova-tarefa button {
+.newTask button {
   height: 2em;
   width: 2em;
   background-color: transparent;
@@ -80,11 +80,11 @@ a {
   cursor: pointer;
 }
 
-.nova-tarefa button:hover {
+.newTask button:hover {
   opacity: 1;
 }
 
-.nova-tarefa button img {
+.newTask button img {
   height: 100%;
   width: 100%;
 }
@@ -100,9 +100,9 @@ a {
   color: grey;
 }
 
-/* Lista de tarefas ----------------------------------------------------------- */
+/* Lista de tasks ----------------------------------------------------------- */
 
-.tarefas-pendentes {
+.pendingTasks {
   display: flex;
   flex-direction: column;
   width: 95%;
@@ -110,13 +110,13 @@ a {
   margin: 2em 15%;
 }
 
-.tarefa {
+.task {
   display: flex;
   align-items: center;
   margin-bottom: 1.5em;
 }
 
-.tarefa .not-done {
+.task .not-done {
   position: relative;
   height: 1.5em;
   width: 1.5em;
@@ -127,11 +127,11 @@ a {
   transition: background-color 200ms linear;
 }
 
-.tarefa .not-done:hover {
+.task .not-done:hover {
   background-color: var(--secondary);
 }
 
-.tarefa:first-child .not-done::before {
+.task:first-child .not-done::before {
   content: '';
   position: absolute;
   bottom: 100%;
@@ -142,7 +142,7 @@ a {
   background-color: var(--secondary);
 }
 
-.tarefa:not(:last-child) .not-done::after {
+.task:not(:last-child) .not-done::after {
   content: '';
   position: absolute;
   top: 100%;
@@ -153,7 +153,7 @@ a {
   background-color: var(--secondary);
 }
 
-.tarefa .descricao{
+.task .description{
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -164,11 +164,11 @@ a {
   box-shadow: 2px 2px 5px lightgrey;
 }
 
-.tarefa .nome {
+.task .nome {
   color: rgb(95, 95, 95);
 }
 
-.tarefa {
+.task {
   font-size: .9em;
   color: rgb(134, 134, 134);
 }
@@ -178,7 +178,7 @@ a {
   font-size: .8em;
 }
 
-.descricao-task {
+.taskDescription {
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -188,9 +188,9 @@ a {
 
 }
 
-/* Tarefas terminadas ----------------------------------------------------------- */
+/* tasks terminadas ----------------------------------------------------------- */
 
-.container-task {
+.containerTask {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -204,7 +204,7 @@ a {
   color: rgb(170, 170, 170);
 }
 
-.titulo-terminadas {
+.titleFinished {
   justify-content: center;
   max-width: 700px;
   align-items: center;
@@ -215,7 +215,7 @@ a {
   box-shadow: 3px 3px 5px lightgrey;
 }
 
-.titulo-terminadas h2 {
+.titleFinished h2 {
   width: 100%;
   text-align: center;
   font-weight: 400;
@@ -223,31 +223,31 @@ a {
   color: rgb(95, 95, 95);
 }
 
-.tarefas-terminadas {
+.finishedTask {
   display: flex;
   flex-direction: column;
   width: 100%;
   list-style: none;
 }
 
-.tarefas-terminadas i{
+.finishedTask i{
   color: grey;
   background-color: rgb(228, 228, 228);
 }
-.tarefas-terminadas button{
+.finishedTask button{
   margin-left: 10px;
 }
 
-.tarefas-terminadas .tarefa .descricao-task {
+.finishedTask .task .taskDescription {
   background-color: rgb(228, 228, 228);
 }
 
-.tarefas-terminadas .tarefa .descricao-task .nome {
+.finishedTask .task .taskDescription .nome {
   color: grey;
   text-decoration: line-through;
 }
 
-#skeleton .descricao-task{
+#skeleton .taskDescription{
   background-color: rgb(189, 189, 189);
 }
 #skeleton p{

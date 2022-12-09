@@ -2,7 +2,7 @@ button.addEventListener('click', function (e) {
   email = document.querySelector("#inputEmail");
   password = document.querySelector("#inputPassword");
 
-  mostrarSpinner();
+  RenderSpinner();
 
   if (validLogin()) {
     e.preventDefault()
