@@ -29,18 +29,18 @@
   </header>
 
   <form class="nova-tarefa">
-    <div class="not-done"></div>
     <input id="novaTarefa" type="text" placeholder="Nova tarefa">
     <button id="submitTask" type="submit" hidden>
       <img src="./assets/plus.png" alt="Adicionar uma nova tarefa">
     </button>
   </form>
-
-  <ul class="tarefas-pendentes"></ul>
-
-  <h2 class="titulo-terminadas">Tarefas terminadas</h2>
-
-  <ul class="tarefas-terminadas"></ul>
+  <div class="titulo-terminadas">
+    <h2>Lista de tarefas</h2>
+  </div>
+  <div class="container-task">
+    <ul class="tarefas-pendentes"></ul>
+    <ul class="tarefas-terminadas"></ul>
+  </div>
 
   <script src="./src/utils.js"></script>
   <script src="./src/tasks/tarefasPendentes.js"></script>

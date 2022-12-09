@@ -38,7 +38,7 @@ onload = function () {
 
     function renderizaDadosUsuario(dadosUsuario) {
         let nomeUsuario = document.getElementById("nomeUsuarioHeader")
-        nomeUsuario.innerText = dadosUsuario.firstName + " " + dadosUsuario.lastName
+        nomeUsuario.innerText = dadosUsuario.firstName
     }
 
     function buscaTarefas() {

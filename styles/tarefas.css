@@ -27,15 +27,6 @@ a {
   text-transform: capitalize;
 }
 
-.user-info .user-image {
-  height: 2em;
-  width: 2em;
-  border-radius: 50%;
-  background-color: white;
-  opacity: .4;
-  margin-left: .7em;
-}
-
 #closeApp{
   margin-left: 15px;
   font-size: .7em;
@@ -49,16 +40,15 @@ a {
 /* Nova tarefa ----------------------------------------------------------- */
 
 .nova-tarefa {
-  position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
+  margin: 10px auto;
   background-color: white;
-  width: 80%;
-  margin: 0 10%;
-  padding: 1em;
+  max-width: 700px;
+  padding: 10px 10px;
   box-shadow: 2px 2px 10px lightgrey;
   border-radius: .2em;
-  z-index: 20;
 }
 
 .nova-tarefa input[type=text] {
@@ -115,7 +105,7 @@ a {
 .tarefas-pendentes {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 95%;
   list-style: none;
   margin: 2em 15%;
 }
@@ -163,9 +153,10 @@ a {
   background-color: var(--secondary);
 }
 
-.tarefa .descricao {
+.tarefa .descricao{
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: space-between;
   flex: 1;
   background-color: white;
@@ -177,34 +168,66 @@ a {
   color: rgb(95, 95, 95);
 }
 
-.tarefa .timestamp {
+.tarefa {
   font-size: .9em;
   color: rgb(134, 134, 134);
 }
 
+.timestamp {
+  margin-top: 5px;
+  font-size: .8em;
+}
+
+.descricao-task {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 2px 2px 5px lightgrey;
+  flex: 1;
+  background-color: white;
+
+}
+
 /* Tarefas terminadas ----------------------------------------------------------- */
 
-.titulo-terminadas {
-  position: relative;
-  width: 8em;
-  text-align: center;
-  padding: .5em 1em;
+.container-task {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: 20px auto;
+  max-width: 700px;
   background-color: white;
   border-radius: .2em;
   box-shadow: 3px 3px 5px lightgrey;
   color: rgb(170, 170, 170);
+}
+
+.titulo-terminadas {
+  justify-content: center;
+  max-width: 700px;
+  align-items: center;
+  margin: 20px auto;
+  display: flex;
+  padding: 11px;
+  background-color: white;
+  box-shadow: 3px 3px 5px lightgrey;
+}
+
+.titulo-terminadas h2 {
+  width: 100%;
+  text-align: center;
   font-weight: 400;
   font-size: 1.1em;
-  margin-left: calc(15% - 4em);
-  z-index: 20;
+  color: rgb(95, 95, 95);
 }
 
 .tarefas-terminadas {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 100%;
   list-style: none;
-  margin: 2em 15%;
 }
 
 .tarefas-terminadas i{
@@ -215,16 +238,16 @@ a {
   margin-left: 10px;
 }
 
-.tarefas-terminadas .tarefa .descricao {
+.tarefas-terminadas .tarefa .descricao-task {
   background-color: rgb(228, 228, 228);
 }
 
-.tarefas-terminadas .tarefa .descricao .nome {
+.tarefas-terminadas .tarefa .descricao-task .nome {
   color: grey;
   text-decoration: line-through;
 }
 
-#skeleton .descricao{
+#skeleton .descricao-task{
   background-color: rgb(189, 189, 189);
 }
 #skeleton p{

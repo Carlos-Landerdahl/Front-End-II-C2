@@ -90,7 +90,7 @@ button:disabled{
   text-align: center;
 }
 .left{
-  width: 50%;  
+  width: 50%; 
   background-color: white;
   text-align: center;
   display: flex;
@@ -110,4 +110,13 @@ button:disabled{
 
 a:hover{
   color: var(--hoverBtn);
+}
+
+@media screen and (max-width: 600px) {
+  .left {
+    display: none;
+  }  
+  .right {
+    width: 100%;
+  }
 }

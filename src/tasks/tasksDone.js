@@ -7,7 +7,7 @@ function renderizaTarefaRealizada(tarefa) {
 
     li.innerHTML = `
         <div class="done"></div>
-        <div class="descricao">
+        <div class="descricao-task">
             <p class="nome">${tarefa.description}</p>
             <div>
                 <button onclick="editaTarefaPeloId(${tarefa.id})"><i id="${tarefa.createdAt}" class="fas fa-undo-alt change"></i></button>
