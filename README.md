@@ -32,6 +32,7 @@ Branch - feat_signup_validation
         - Ação botão de finalizar app
         - Animação de carregamento (Spinner)
         - Refatoração do código
+        - Animação skeleton (carregamento das tarefas)
 
 - [Matheus Quirino](https://github.com/mthflashice)
     - Principais atividades realizadas:

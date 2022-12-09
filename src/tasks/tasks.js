@@ -3,6 +3,7 @@ let jwt;
 
 // CARREGANDO DADOS PERFIL USUARIO E tasks
 onload = function () {
+    renderizarSkeletons(3, ".pendingTasks");
     jwt = sessionStorage.getItem('jwt');
 
     if (!jwt) {
@@ -38,7 +39,7 @@ onload = function () {
 
     function renderDataUser(dadosUsuario) {
         let nomeUsuario = document.getElementById("nameUserHeader")
-        nomeUsuario.innerText = dadosUsuario.firstName
+        nomeUsuario.innerText = dadosUsuario.firstName + " " + dadosUsuario.lastName
     }
 
     function getTasks() {
@@ -55,7 +56,10 @@ onload = function () {
             )
             .then(
                 response => {
-                    createTask(response)
+                    setTimeout(function () {
+                        createTask(response)
+                        removerSkeleton(".pendingTasks")
+                    }, 500)
                 }
             )
             .catch(
