@@ -84,7 +84,7 @@ Além do citado acima, implementamos um sistema de autenticação de usuários, 
      </li>
      <li>
        👨 Samuel Carvalho: 
-     <a></a>
+     <a>https://www.linkedin.com/in/samuel-carvalho-6582521bb/</a>
      </li>
   </ul>
 </div>
