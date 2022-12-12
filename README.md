@@ -61,30 +61,38 @@ Além do citado acima, implementamos um sistema de autenticação de usuários, 
 
 <div id="developers">
   <h1 align="center">Desenvolvedores do Projeto</h1>
-  <ul style="font-size: 22px; list-style:none; display: flex; flex-direction:column; gap: 10px">
-    <li>
-       👦 Bruno Chaves: 
-     <a>https://www.linkedin.com/in/bchavs12/</a>
-     </li>
-   <li>
-       👨 Carlos Roberto Landerdahl: 
-     <a>https://www.linkedin.com/in/carloslanderdahl/</a>
-     </li>
-     <li>
-       👦 Diovano: 
-     <a></a>
-     </li>
-     <li>
-       👨 Matheus Quirino: 
-     <a>https://www.linkedin.com/in/matheusquirinoleitelino/</a>
-     </li>
-     <li>
-       👦 Igor Cruz: 
-     <a>https://www.linkedin.com/in/igorfreitascruz/</a>
-     </li>
-     <li>
-       👨 Samuel Carvalho: 
-     <a>https://www.linkedin.com/in/samuel-carvalho-6582521bb/</a>
-     </li>
+
+- [Bruno Chaves](https://www.linkedin.com/in/bchavs12/)
+    - Principais atividades realizadas:
+        - Gerenciamento do repositorio(Branchs,pullRequest)
+        - Validação do formulario de registro
+        - Criação do README.MD
+        - Estilização da pagina Signup
+        
+- [Igor Cruz](https://github.com/IgorFreitasCruz)
+    - Principais atividades realizadas:
+        - Página de tarefas (CRUD)
+        - Ação botão de finalizar app
+        - Animação de carregamento (Spinner)
+        - Refatoração do código
+        - Animação skeleton (carregamento das tarefas)
+
+- [Matheus Quirino](https://github.com/mthflashice)
+    - Principais atividades realizadas:
+        - Validações
+        - 
+        - 
+
+- [Diovano Cassiano](https://github.com/diovanocf)
+    - Principais atividades realizadas:
+        - Validações 
+        - 
+        - 
+
+- [Carlos roberto landerdahl](https://github.com/Carlos-Landerdahl)
+    - Principais atividades realizadas:
+        -  Validação do Login
+        -  registro de enpoints(api)
+        -  Estilização das páginas
   </ul>
 </div>
