@@ -68,7 +68,7 @@ Além do citado acima, implementamos um sistema de autenticação de usuários, 
      </li>
    <li>
        👨 Carlos Roberto Landerdahl: 
-     <a></a>
+     <a>https://www.linkedin.com/in/carloslanderdahl/</a>
      </li>
      <li>
        👦 Diovano: 
@@ -76,11 +76,11 @@ Além do citado acima, implementamos um sistema de autenticação de usuários, 
      </li>
      <li>
        👨 Matheus Quirino: 
-     <a></a>
+     <a>https://www.linkedin.com/in/matheusquirinoleitelino/</a>
      </li>
      <li>
        👦 Igor Cruz: 
-     <a></a>
+     <a>https://www.linkedin.com/in/igorfreitascruz/</a>
      </li>
      <li>
        👨 Samuel Carvalho: 
