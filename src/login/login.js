@@ -1,3 +1,5 @@
+sessionStorage.setItem("counter", 0)
+
 button.addEventListener('click', function (e) {
   email = document.querySelector("#inputEmail");
   password = document.querySelector("#inputPassword");
