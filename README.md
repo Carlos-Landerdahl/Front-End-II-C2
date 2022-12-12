@@ -9,7 +9,7 @@
 
 <div id="tecnologies" style="margin-bottom: 30px">
 
-<div style="display:flex; justify-content:center; gap: 10px; flex-wrap:wrap; ">
+<div align="center" style="display:flex; justify-content:center; gap: 10px; flex-wrap:wrap; ">
 <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E">
 <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white">
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
@@ -44,17 +44,17 @@ Além do citado acima, implementamos um sistema de autenticação de usuários, 
 
 <div>
     <p style="color: wheat; font-size: 22px">🖥️ Login</p>
-    <img src="./assets/icons/todo-login.png" width="500px">
+    <img src="./assets/icons/Todo-login.PNG" width="500px">
 </div>
 
 <div >
 <p  style="color: wheat; font-size: 22px;">🖥️ Register account</p>
-<img src="./assets/icons/todo-register.png" width="500px">
+<img src="./assets/icons/todo-register.PNG" width="500px">
 </div>
 
 <div>
 <p style="color: wheat; font-size: 22px">🖥️ Tasks</p>
-<img src="./assets/icons/todo-tasks.png" width="500px">
+<img src="./assets/icons/todo-tasks.PNG" width="500px">
 </div>
 
 </section>
