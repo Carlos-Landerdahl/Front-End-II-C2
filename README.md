@@ -94,5 +94,11 @@ Além do citado acima, implementamos um sistema de autenticação de usuários, 
         -  Validação do Login
         -  registro de enpoints(api)
         -  Estilização das páginas
+          
+- [Samuel de Carvalho]()
+    - Principais atividades realizadas:
+        -  Registro Spinner
+        -  Login Spinner
+        -  
   </ul>
 </div>
