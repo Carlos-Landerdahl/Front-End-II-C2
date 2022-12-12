@@ -40,7 +40,7 @@ Além do citado acima, implementamos um sistema de autenticação de usuários, 
 
 <h1 align="center" style="padding:20px">🔖 Layouts</h1>
 
-<section style="display:flex; align-itens:center; justify-content:center; gap: 10px; flex-wrap:wrap; text-align: center; margin-bottom: 50px">
+<section align="center" style="display:flex; align-itens:center; justify-content:center; gap: 10px; flex-wrap:wrap; text-align: center; margin-bottom: 50px">
 
 <div>
     <p style="color: wheat; font-size: 22px">🖥️ Login</p>
