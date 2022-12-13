@@ -95,7 +95,7 @@ Além do citado acima, implementamos um sistema de autenticação de usuários, 
         -  registro de enpoints(api)
         -  Estilização das páginas
           
-- [Samuel de Carvalho]()
+- [Samuel de Carvalho](https://www.linkedin.com/mwlite/in/samuel-carvalho-6582521bb)
     - Principais atividades realizadas:
         -  Registro Spinner
         -  Login Spinner
