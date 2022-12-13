@@ -22,8 +22,8 @@ function validRegister() {
     inputPwd.value === inputPwd2.value
     ) {
     btnCreateAccount.style.backgroundColor = "#7898FF"
-    btnCreateAccount.innerText = "Acessar";
-    btnCreateAccount.removeAttribute("disabled");
+    btnCreateAccount.innerText = "Criar conta";
+    btnCreateAccount.removeAttribute("disabled", false);
     return true;
   } else {
     btnCreateAccount.style.backgroundColor = "#979292A1"
@@ -78,16 +78,16 @@ function validEmail() {
 validEmail()
 
 inputEmail.addEventListener("keyup", () => {
-  if(!inputEmail.checkValidity()) {
-    smallEmail.innerText = "Email inválido"
-    validEmail()
-    emailIsValid = false
-    
-  } else {
+  if(inputEmail.checkValidity()) {
+    emailIsValid = true
     smallEmail.innerHTML = ""
     inputEmail.style.border = "2px solid transparent"
-    emailIsValid = true
+  } else {
+    emailIsValid = false
+    validEmail()
   }
+  validRegister();
+  console.log(emailIsValid);
 })
 
 // Password validation
