@@ -9,12 +9,16 @@ let nameIsValid = 3;
 let surnameIsValid = 3;
 let emailIsValid = false;
 let pwdIsValid = 5;
+let pwdIstrue = false;
 
 function validRegister() {
   if (
-    inputName.value.length !== nameIsValid && 
-    inputSurname.value.length !== surnameIsValid &&
+    inputName.value.length >= nameIsValid && 
+    inputSurname.value.length >= surnameIsValid &&
     emailIsValid === true &&
+    pwdIstrue === true && 
+    inputPwd.value.length >= pwdIsValid && 
+    inputPwd2.value.length >= pwdIsValid &&
     inputPwd.value === inputPwd2.value
     ) {
     btnCreateAccount.style.backgroundColor = "#7898FF"
@@ -77,6 +81,7 @@ inputEmail.addEventListener("keyup", () => {
   if(!inputEmail.checkValidity()) {
     smallEmail.innerText = "Email inválido"
     validEmail()
+    emailIsValid = false
     
   } else {
     smallEmail.innerHTML = ""
@@ -95,19 +100,23 @@ validPwd()
 
 inputPwd.addEventListener("keyup", () => {
   if (inputPwd.value.length < pwdIsValid) {
+    pwdIstrue = false;
     validPwd()
   }else {
     smallPwd.innerText = "";
     inputPwd.style.border = "2px solid transparent"
+    pwdIstrue = true;
   }
   validRegister();
 
   if (inputPwd2.value !== inputPwd.value || inputPwd2.value === "") {
     smallPwd2.innerText = "Sua senha não é igual"
+    pwdIstrue = false;
     validPwd2()
   } else {
     smallPwd2.innerText = "";
     inputPwd2.style.border = "2px solid transparent"
+    pwdIstrue = true;
   }
   validRegister();
 });
@@ -124,16 +133,21 @@ validPwd2()
 inputPwd2.addEventListener("keyup", () => {
   if (inputPwd2.value !== inputPwd.value || inputPwd2.value === "") {
     smallPwd2.innerText = "Sua senha não é igual"
+    pwdIstrue = false;
     validPwd2()
   } else {
     smallPwd2.innerText = "";
     inputPwd2.style.border = "2px solid transparent"
+    pwdIstrue = true;
   }
+
   if (inputPwd.value.length < pwdIsValid) {
+    pwdIstrue = false;
     validPwd()
   } else {
     smallPwd.innerText = "";
-    inputPwd.style.border = "2px solid transparent"
+    inputPwd.style.border = "2px solid transparent";
+    pwdIstrue = true;
   }
   validRegister();
 });
