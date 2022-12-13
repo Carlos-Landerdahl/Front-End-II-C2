@@ -91,9 +91,10 @@ Além do citado acima, implementamos um sistema de autenticação de usuários, 
 
 - [Carlos roberto landerdahl](https://github.com/Carlos-Landerdahl)
     - Principais atividades realizadas:
-        -  Validação do Login
-        -  registro de enpoints(api)
+        -  Validação do Login e Registro
+        -  Registro de enpoints(api)
         -  Estilização das páginas
+        -  Responsividade
           
 - [Samuel de Carvalho](https://www.linkedin.com/mwlite/in/samuel-carvalho-6582521bb)
     - Principais atividades realizadas:
