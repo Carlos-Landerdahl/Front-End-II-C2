@@ -5,8 +5,8 @@ let inputPwd = document.getElementById('inputPwd');
 let inputPwd2 = document.getElementById('inputPwd2');
 let btnCreateAccount = document.getElementById('btnCreateAccount');
 
-let nameIsValid = '';
-let surnameIsValid = '';
+let nameIsValid = 3;
+let surnameIsValid = 3;
 let emailIsValid = false;
 let pwdIsValid = 5;
 
@@ -14,7 +14,7 @@ function validRegister() {
   if (
     inputName.value.length !== nameIsValid && 
     inputSurname.value.length !== surnameIsValid &&
-    inputEmail.value.length > emailIsValid &&
+    emailIsValid === true &&
     inputPwd.value === inputPwd2.value
     ) {
     btnCreateAccount.style.backgroundColor = "#7898FF"
@@ -38,7 +38,7 @@ function validName() {
 validName()
 
 inputName.addEventListener("keyup", () => {
-  if (inputName.value === nameIsValid) {
+  if (inputName.value.length < nameIsValid) {
     validName()
   } else {
     smallName.innerText = "";
@@ -56,7 +56,7 @@ function validSurname() {
 validSurname()
 
 inputSurname.addEventListener("keyup", () => {
-  if (inputSurname.value === nameIsValid) {
+  if (inputSurname.value.length < nameIsValid) {
     validSurname()
   } else {
     smallSurname.innerText = "";
