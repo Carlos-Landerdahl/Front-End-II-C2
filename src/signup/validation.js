@@ -96,9 +96,18 @@ validPwd()
 inputPwd.addEventListener("keyup", () => {
   if (inputPwd.value.length < pwdIsValid) {
     validPwd()
-  } else {
+  }else {
     smallPwd.innerText = "";
     inputPwd.style.border = "2px solid transparent"
+  }
+  validRegister();
+
+  if (inputPwd2.value !== inputPwd.value || inputPwd2.value === "") {
+    smallPwd2.innerText = "Sua senha não é igual"
+    validPwd2()
+  } else {
+    smallPwd2.innerText = "";
+    inputPwd2.style.border = "2px solid transparent"
   }
   validRegister();
 });
@@ -113,12 +122,18 @@ function validPwd2() {
 validPwd2()
 
 inputPwd2.addEventListener("keyup", () => {
-  if (inputPwd2.value !== inputPwd.value) {
+  if (inputPwd2.value !== inputPwd.value || inputPwd2.value === "") {
     smallPwd2.innerText = "Sua senha não é igual"
     validPwd2()
   } else {
     smallPwd2.innerText = "";
     inputPwd2.style.border = "2px solid transparent"
+  }
+  if (inputPwd.value.length < pwdIsValid) {
+    validPwd()
+  } else {
+    smallPwd.innerText = "";
+    inputPwd.style.border = "2px solid transparent"
   }
   validRegister();
 });
