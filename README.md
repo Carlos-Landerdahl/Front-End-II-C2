@@ -77,18 +77,6 @@ Além do citado acima, implementamos um sistema de autenticação de usuários, 
         - Refatoração do código
         - Animação skeleton (carregamento das tarefas)
 
-- [Matheus Quirino](https://github.com/mthflashice)
-    - Principais atividades realizadas:
-        - Validações
-        - 
-        - 
-
-- [Diovano Cassiano](https://github.com/diovanocf)
-    - Principais atividades realizadas:
-        - Validações 
-        - 
-        - 
-
 - [Carlos roberto landerdahl](https://github.com/Carlos-Landerdahl)
     - Principais atividades realizadas:
         -  Validação do Login e Registro
@@ -100,6 +88,5 @@ Além do citado acima, implementamos um sistema de autenticação de usuários, 
     - Principais atividades realizadas:
         -  Registro Spinner
         -  Login Spinner
-        -  
   </ul>
 </div>
