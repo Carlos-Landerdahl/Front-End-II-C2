@@ -1,4 +1,3 @@
-
 function renderingTaskComplete(task) {
 
     let taskFinishedUl = document.querySelector(".finishedTask")

@@ -1,8 +1,5 @@
 {
     "configurations": [
-    
-
-    
         {
             "type": "chrome",
             "name": "Server Chrome",
