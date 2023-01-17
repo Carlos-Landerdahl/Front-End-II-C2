@@ -1,7 +1,5 @@
-
 let jwt;
 
-// CARREGANDO DADOS PERFIL USUARIO E tasks
 onload = function () {
     renderizarSkeletons(3, ".pendingTasks");
     jwt = sessionStorage.getItem('jwt');
@@ -78,7 +76,6 @@ onload = function () {
     }
 }
 
-// CRIANDO UMA NOVA task
 let newTaskInput = document.querySelector(".newTask")
 newTaskInput.addEventListener('submit', function (event) {
     event.preventDefault()

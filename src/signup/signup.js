@@ -3,8 +3,6 @@ btnCreateAccount.addEventListener('click', function (event) {
   RenderSpinner()
   validRegister()
   RegisterAccount()
-  
-
 });
 
 function RegisterAccount () {
